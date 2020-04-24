@@ -81,6 +81,12 @@ export default class WelcomeScreen extends Component {
           </div>
         </div>
 
+        <div className="layoutFlow" style={layoutFlowStyle}>
+          <div className="elText">
+            <div className="systemFontItalic" style={style_elText}>
+            </div>
+          </div>
+
           <div className="elFauxairLargeLogo">
             <div style={style_elFauxairLargeLogo} />
           </div>
