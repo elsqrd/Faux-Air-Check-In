@@ -12,7 +12,7 @@ export default class WelcomeScreen extends Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
     };
   }
@@ -32,10 +32,10 @@ export default class WelcomeScreen extends Component {
   onClick_elButton = (ev) => {
     // Go to screen 'Conditions'
     this.props.appActions.goToScreen('conditions', { transitionId: 'fadeIn' });
-  
+
   }
-  
-  
+
+
   render() {
     let layoutFlowStyle = {};
     let baseStyle = {};
@@ -46,7 +46,7 @@ export default class WelcomeScreen extends Component {
       layoutFlowStyle.height = '100vh';
       layoutFlowStyle.overflow = 'hidden';
     }
-    
+
     const style_elBackground = {
       width: '100%',
       height: '100%',
@@ -59,12 +59,12 @@ export default class WelcomeScreen extends Component {
       color: 'rgba(0, 0, 0, 0.5000)',
       textAlign: 'center',
      };
-    
+
     const style_elFauxairLargeLogo = {
       backgroundImage: 'url('+img_elFauxairLargeLogo+')',
       backgroundSize: '100% 100%',
      };
-    
+
     const style_elButton = {
       display: 'block',
       color: 'white',
@@ -72,7 +72,7 @@ export default class WelcomeScreen extends Component {
       cursor: 'pointer',
       pointerEvents: 'auto',
      };
-    
+
     return (
       <div className="AppScreen WelcomeScreen" style={baseStyle}>
         <div className="background">
@@ -80,27 +80,20 @@ export default class WelcomeScreen extends Component {
             <div className="appBg" style={style_elBackground} />
           </div>
         </div>
-        
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className="elText">
-            <div className="systemFontItalic" style={style_elText}>
-              <div>{this.props.locStrings.welcome_text_825962}</div>
-            </div>
-          </div>
-          
+
           <div className="elFauxairLargeLogo">
             <div style={style_elFauxairLargeLogo} />
           </div>
-          
+
           <div className="elButton">
             <Button className="actionFont" style={style_elButton}  variant="raised" color="accent" onClick={this.onClick_elButton} >
               {this.props.locStrings.screen2_button_394080}
             </Button>
           </div>
         </div>
-        
+
       </div>
     )
   }
-  
+
 }
